@@ -1,0 +1,6 @@
+mkdir projects
+cd projects
+mkdir rarity
+cd rarity
+pip freeze
+flask run
