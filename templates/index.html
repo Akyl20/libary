@@ -6,13 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Add a book to our library</h3>
+    <a href="{{ url_for('authors') }}">Авторы</a>
+    <a id="books" href="{{ url_for('books') }}">Книги</a>
+    <h3>Добавьте свою книгу</h3>
     <form action="{{ url_for('add') }}" method="POST">
-        <input type="text" placeholder="Author's name" name="author">
+        <input type="text" placeholder="Имя автора" name="Имя Автора">
         <br><br>
-        <input type="text" placeholder="Book" name="book">
+        <input type="text" placeholder="Книга" name="Книга">
         <br><br>
-        <button>Add</button>
+        <button>Добавить</button>
     </form>
 </body>
 </html>
