@@ -30,3 +30,10 @@ a {
 table, tr, td, th {
     border: 1px solid black;
 }
+
+body{
+    background-image: url("https://i.artfile.ru/2560x1600_797785_[www.ArtFile.ru].jpg");
+    background-size: 100%;
+    background-attachment: fixed; width: 1920px;
+    height: 1080px;
+} 

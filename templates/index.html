@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='lib.jpg') }}" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
 </head>
+<style>
+body{
+    background-image: url("https://i.artfile.ru/2560x1600_797785_[www.ArtFile.ru].jpg");
+    background-size: 100%;
+    background-attachment: fixed; 
+} 
+</style>
 <body>
     <a href="{{ url_for('authors') }}">Авторы</a>
-    <a id="books" href="{{ url_for('books') }}">Книги</a>
-    <h3>Добавьте свою книгу</h3>
+    <a id="book" href="{{ url_for('books') }}">Книги</a>
+    <h3>Добавьте книгу в нашу библиотеку</h3>
+    <div class="form-inline" action="/action_page.php">
+    
     <form action="{{ url_for('add') }}" method="POST">
-        <input type="text" placeholder="Имя автора" name="Имя Автора">
-        <br><br>
-        <input type="text" placeholder="Книга" name="Книга">
+        <input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Автор" name="author">
+        <input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Книга" name="book">
+        
+        
         <br><br>
         <button>Добавить</button>
     </form>
